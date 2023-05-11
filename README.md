@@ -37,7 +37,7 @@ And double-check the Kconfig file in the build results to make sure what you've 
 
 ### After disconnecting the keyboard from Bluetooth, it won't reconnect.
 
-#### Forget the Bluetooth connection on both the BDE and the device, then try re-pairing.
+#### Forget the Bluetooth connection on both the BB65 and the host, then try re-pairing.
 
 If you don't remember which profile on the BB65 was used to connect to a specific device, this may mean cycling through each (`&bt BT_PRV`/`&bt BT_NXT`) and clearing them (`&bt BT_CLR`) one by one. [See ZMK's documentation for more info](https://zmk.dev/docs/behaviors/bluetooth#bluetooth-pairing-and-profiles).
 
