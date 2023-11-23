@@ -29,6 +29,8 @@ A few more examples below:
 
 There are many, many more differences. Don't forget to [check the ZMK docs](https://zmk.dev/docs/features/keymaps).
 
+[nickcoutsos's in-browser keymap editor](https://nickcoutsos.github.io/keymap-editor) aims to provide a GUI for remapping, which may be helpful.
+
 ### The RGB/encoder(s) don't work.
 
 #### Double-check the features in the [config/bb65.conf](config/bb65.conf) file.
