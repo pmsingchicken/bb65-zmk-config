@@ -2,12 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: mechwild
-      url-base: https://github.com/mechwild
   projects:
     - name: zmk
-      remote: mechwild
-      revision: refs/heads/bb65
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config

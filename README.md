@@ -2,18 +2,22 @@
 
 ## Instructions
 
+### Brand new to ZMK?
+
 1. You will need to [sign up for a GitHub account](https://github.com/signup), and [fork this repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) so you can edit it.
 2. Navigate to the **Actions** tab and click the "I understand my workflows, go ahead and run them" button to enable builds.
    ![Actions tab with "I understand my workflows" button](https://i.imgur.com/B7cTAE6.png)
 3. Edit the [config/bb65.conf](config/bb65.conf) to enable/disable features. Edit [config/bb65.keymap](config/bb65.keymap) to change the keymap. Lastly, make sure the [build.yaml](build.yaml) file has your board in the "boards" list.
 4. After committing your changes, your firmware will begin compiling. Assuming there are no typos or other problems, it will eventually be [downloadable from the Actions tab](https://zmk.dev/docs/user-setup#installing-the-firmware).
-5. [Flash the firmware](https://zmk.dev/docs/user-setup#flashing-uf2-files) that matches the board you're using, e.g. `bb65-nice_nano_v2-zmk.uf2` for a nice!nano v2.
+5. [Flash the firmware](https://zmk.dev/docs/user-setup#flashing-uf2-files) that matches the board you're using, e.g. `bb65-pillbug-zmk.uf2` for a PillBug.
 
 ## Common Questions/Problems
 
 ### There was an error and the build didn't finish.
 
 #### There is probably an error in your keymap.
+
+[Clicking into the details of the action](https://docs.github.com/en/actions/quickstart#viewing-your-workflow-results) will show the error log. While very long, this log will often show the exact line number causing the problem in your keymap so it is worth reading closely.
 
 Carefully double-check the last changes you made. ZMK syntax is very different from QMK syntax. Note that when editing keymaps, each ZMK code is generally preceded by a reference categorizing what that code does.
 
@@ -30,6 +34,12 @@ A few more examples below:
 There are many, many more differences. Don't forget to [check the ZMK docs](https://zmk.dev/docs/features/keymaps).
 
 [nickcoutsos's in-browser keymap editor](https://nickcoutsos.github.io/keymap-editor) aims to provide a GUI for remapping, which may be helpful.
+
+### I edited the keymap and flashed, but nothing was updated.
+
+#### Make sure you are editing the files in the [config](config) folder.
+
+Changes made in the `boards/shields` folder won't be picked up; you don't need to edit these files.
 
 ### The RGB/encoder(s) don't work.
 
